@@ -3,13 +3,17 @@
 // Apply my colors, to the text and shape selected by the user and add them together here
 // then create the SVG file
 const inquirer = require('inquirer');
+const MaxLengthInputPrompt = require('inquirer-maxlength-input-prompt');
+
+inquirer.registerPrompt('max-length', MaxLengthInputPrompt);
 
 function init () {
     inquirer.prompt([
         {
-            type:'input',
+            type:'max-length',
             message:'Type 3 characters to include in your logo',
-            name:'text'
+            name:'text',
+            maxLength: 3
         },
         {
             type:'input',
@@ -17,9 +21,10 @@ function init () {
             name:'text-color'
         },
         {
-            type:'choice',
+            type:'list',
             message:'Pick which shape you would like your logo to take',
-            name:'shape'
+            name:'shape',
+            choices:['Circle', 'Square', 'Triangle']
         },
         {
             type:'input',
@@ -27,4 +32,6 @@ function init () {
             name:'shape-color'
         }
     ])
-}
+};
+
+init();
