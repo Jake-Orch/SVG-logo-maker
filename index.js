@@ -54,22 +54,21 @@ function init() {
     ])
         .then((data) => {
             //What to do with data
-            const newLogo = shapeChecker(data)
+            const {shape, shapeColor, text, textColor} = data;
+            const newLogo = shapeChecker(shape, shapeColor, text, textColor)
+            console.log(newLogo)
             fs.writeFile('logo.svg', newLogo, (e) => {
                 e ? console.log(e) : console.log('Logo saved as "logo.svg"')
             });
         })
 };
-function shapeChecker ({shape, shapeColor, text, textColor}) {
+function shapeChecker (shape, shapeColor, text, textColor) {
         if (shape == 'Square') {
-        const newLogo = new Square(shape, shapeColor, text, textColor)
-        return newLogo
+        new Square(shape, shapeColor, text, textColor)
     } else if (shape == 'Circle') {
-        const newLogo = new Circle(shape, shapeColor, text, textColor)
-        return newLogo
+        new Circle(shape, shapeColor, text, textColor)
     } else {
-        const newLogo = new Triangle(shape, shapeColor, text, textColor)
-        return newLogo
+        new Triangle(shape, shapeColor, text, textColor)
     }
 }
 
