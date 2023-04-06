@@ -14,6 +14,8 @@ This application alows the user to create a small (200px by 200px) image logo (s
 To install the application, have Node JS and a code editor installed (VS Code works fine) git clone the repository to your device, open a terminal in the downloaded folder and open the terminal, once in the terminal, run npm i (or npm install) to install all necesarry dependencies for the application, then run node index.js and you are ready to answer the necesarry questions to generate your profesional README. I have a link to a video tutorial on how to install and run the code inside the "usage" section of this README.    
 ## Usage  
 Once the file is installed and ready to run, type node index.js into the terminal to run the file, then answer the following questions, your answers will be used to create the image using classes and templated implemented by myself. Once the user has answered all 4 questions, they will be alerted that their logo has been created in the terminal, the file is called "logo.svg". Open this file in your internet browser to view your logo.
+
+[Link to video tutorial](https://drive.google.com/file/d/1VzCtUAHBfvrWTuCh4fesSimN_JmMj3ts/view?usp=share_link)
 ## License  
 N/A
 ## Contributing  
