@@ -54,6 +54,7 @@ function init() {
     ])
         .then((data) => {
             //What to do with data
+            console.log(data)
             const {shape, shapeColor, text, textColor} = data;
             const newLogo = shapeChecker(shape, shapeColor, text, textColor).makeLogo()
             console.log(newLogo)
@@ -64,11 +65,12 @@ function init() {
 };
 function shapeChecker (shape, shapeColor, text, textColor) {
         if (shape == 'Square') {
-       return new Square(shape, shapeColor, text, textColor)
+            console.log(shapeColor + ' fix');
+       return new Square(shapeColor, text, textColor)
     } else if (shape == 'Circle') {
-       return new Circle(shape, shapeColor, text, textColor)
+       return new Circle(shapeColor, text, textColor)
     } else {
-       return new Triangle(shape, shapeColor, text, textColor)
+       return new Triangle(shapeColor, text, textColor)
     }
 }
 
