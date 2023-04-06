@@ -13,7 +13,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^9.1.5"
+    "inquirer": "^8.2.5",
+    "inquirer-maxlength-input-prompt": "^1.0.2",
+    "is-color": "^1.0.2"
   },
   "devDependencies": {
     "jest": "^29.5.0"
