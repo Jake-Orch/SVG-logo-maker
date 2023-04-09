@@ -8,7 +8,6 @@ const isColor = require('is-color');
 const { Circle, Square, Triangle } = require('./lib/shapes');
 const MaxLengthInputPrompt = require('inquirer-maxlength-input-prompt');
 
-
 inquirer.registerPrompt('max-length', MaxLengthInputPrompt);
 
 function init() {
@@ -57,15 +56,17 @@ function init() {
             console.log(data)
             const {shape, shapeColor, text, textColor} = data;
             const newLogo = shapeChecker(shape, shapeColor, text, textColor).makeLogo()
+//            shapeAssembler(shape, newLogo)
             console.log(newLogo)
             fs.writeFile('logo.svg', newLogo, (e) => {
                 e ? console.log(e) : console.log('Logo saved as "logo.svg"')
             });
         })
 };
+
+
 function shapeChecker (shape, shapeColor, text, textColor) {
         if (shape == 'Square') {
-            console.log(shapeColor + ' fix');
        return new Square(shapeColor, text, textColor)
     } else if (shape == 'Circle') {
        return new Circle(shapeColor, text, textColor)
@@ -73,5 +74,17 @@ function shapeChecker (shape, shapeColor, text, textColor) {
        return new Triangle(shapeColor, text, textColor)
     }
 }
+
+// function shapeAssembler (shape, newLogo) {
+//     if (shape == 'Square') {
+//    return `<svg version="1.1"
+//    width="300" height="200"
+//    xmlns="http://www.w3.org/2000/svg">` + newLogo + 
+// } else if (shape == 'Circle') {
+//    return 
+// } else {
+//    return 
+// }
+// }
 
 init()
