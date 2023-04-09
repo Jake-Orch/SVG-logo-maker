@@ -1,7 +1,8 @@
 # SVG logo maker   
  
 ## Description  
-This application alows the user to create a small (200px by 200px) image logo (svg file), with 3 characters of their choosing and a shape of their choosing from either a circle, triangle or a square.   
+This application alows the user to create a small (300px by 200px) image logo (svg file), with 3 characters of their choosing and a shape of their choosing from either a circle, triangle or a square.   
+
 ## Table of contents
 [Description](#description)  
 [Installation](#installation)  
